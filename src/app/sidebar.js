@@ -1007,26 +1007,26 @@ export default function Sidebar({ open, onMenuClick }) {
                 open ? "w-64" : "w-16",
             )}
         >
-            <div className="flex items-center justify-center h-16 border-b border-slate-200/50 dark:border-[#443C68]/50 flex-shrink-0 bg-gradient-to-r from-medivardaan-teal/3 to-medivardaan-blue/3">
+            <div className="flex items-center justify-center h-16 border-b border-slate-200/50 dark:border-[#443C68]/50 flex-shrink-0 bg-gradient-to-r from-medivardaan-teal/3 to-medivardaan-blue/3 dark:bg-medivardaan-purple-deep overflow-hidden">
                 {open ? (
                     <>
                         <Image
-                            src="/logo.png"
+                            src="/medivardaan-logo-transparent.png"
                             width={0}
                             height={0}
                             sizes="100vw"
-                            style={{ width: "auto", height: "65px" }}
+                            style={{ width: "110px", height: "95px" }}
                             alt="MediVardaan Logo"
-                            className="object-contain dark:hidden"
+                            className="object-fill dark:hidden"
                         />
                         <Image
                             src="/medivardaan-logo-transparent.png"
                             width={0}
                             height={0}
                             sizes="100vw"
-                            style={{ width: "auto", height: "65px" }}
+                            style={{ width: "110px", height: "95px" }}
                             alt="MediVardaan Logo"
-                            className="object-contain hidden dark:block dark:brightness-0 dark:invert dark:opacity-80"
+                            className="object-fill hidden dark:inline-block dark:brightness-0 dark:invert dark:overflow-y-hidden"
                         />
                     </>
                 ) : (
