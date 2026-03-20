@@ -167,7 +167,7 @@ export default function FinanceReconciliationPage() {
       <div className="border border-gray-200 dark:border-[#443C68]/50 rounded-sm overflow-hidden bg-white dark:bg-[#18122B] shadow-sm">
         <div className="overflow-x-auto">
             <Table>
-              <TableHeader className="bg-primary/10 dark:bg-[#393053]">
+              <TableHeader >
                 <TableRow className="border-b border-gray-100 dark:border-[#443C68]/50 hover:bg-primary/10 dark:hover:bg-[#393053]">
                   <TableHead className="text-xs font-bold text-gray-700 dark:text-white/75 h-10 w-12">Sr. No.</TableHead>
                   <TableHead className="text-xs font-bold text-gray-700 dark:text-white/75 h-10 w-32"></TableHead> 

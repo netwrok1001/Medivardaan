@@ -93,7 +93,7 @@ export default function ViewTodaysConfirmedAppointments() {
       {/* Table Section */}
       <div className="border border-gray-200 dark:border-[#443C68]/50 rounded-t-lg overflow-hidden">
         <Table>
-          <TableHeader className="bg-primary/10 dark:bg-[#393053]">
+          <TableHeader >
             <TableRow className="hover:bg-primary/20 dark:hover:bg-[#443C68]/50 border-gray-200 dark:border-[#443C68]/50">
               <TableHead className="text-center font-bold text-gray-700 dark:text-white/75 w-[100px]">Sr. No.</TableHead>
               <TableHead className="text-center font-bold text-gray-700 dark:text-white/75">Patient No</TableHead>

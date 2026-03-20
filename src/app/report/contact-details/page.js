@@ -84,8 +84,8 @@ export default function ContactDetailsPage() {
       {/* Table */}
       <div className="border border-gray-200 dark:border-[#443C68]/50 rounded-t-lg overflow-hidden">
         <Table>
-          <TableHeader className="bg-primary/10 dark:bg-[#393053]">
-            <TableRow className="hover:bg-primary/10 dark:hover:bg-[#443C68]/50 border-gray-200 dark:border-[#443C68]/50">
+          <TableHeader >
+            <TableRow >
               <TableHead className="font-bold text-gray-700 dark:text-white/75 w-[80px]">Sr. No.</TableHead>
               <TableHead className="font-bold text-gray-700 dark:text-white/75">Name</TableHead>
               <TableHead className="font-bold text-gray-700 dark:text-white/75 text-right pr-12">Mobile No</TableHead>
@@ -93,7 +93,7 @@ export default function ContactDetailsPage() {
           </TableHeader>
           <TableBody>
             {currentItems.map((contact, index) => (
-              <TableRow key={contact.id} className="border-gray-200 dark:border-[#443C68]/50 dark:hover:bg-[#393053]/50">
+              <TableRow key={contact.id} >
                 <TableCell className="dark:text-white/75">{indexOfFirstItem + index + 1}</TableCell>
                 <TableCell className="dark:text-white/75 uppercase">{contact.name}</TableCell>
                 <TableCell className="dark:text-white/75 text-right pr-12">{contact.mobile}</TableCell>

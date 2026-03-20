@@ -35,7 +35,7 @@ export default function TreatmentUpdates() {
     <div className="min-h-screen bg-gray-50 dark:bg-[#18122B] p-6 flex items-start justify-center">
       <div className="w-full max-w-4xl mt-8">
         <Card className="w-full shadow-md border border-gray-200 dark:border-[#443C68]/50 rounded-lg overflow-hidden bg-white dark:bg-[#393053]">
-          <CardHeader className="bg-primary/10 dark:bg-primary/20 border-b border-primary/20 dark:border-primary/30 p-6">
+          <CardHeader className="border-b border-primary/20 dark:border-primary/30 p-6">
             <h2 className="text-2xl font-semibold text-primary dark:text-medivardaan-purple text-center">
               Treatment Updates
             </h2>

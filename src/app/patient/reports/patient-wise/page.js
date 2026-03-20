@@ -51,7 +51,7 @@ function page() {
         accessorKey: "revenue",
         cell: (info) => {
           const value = info.getValue();
-          return <p className=''>{Number(value)?.toLocaleString("en-IN")}</p>
+          return <p >{Number(value)?.toLocaleString("en-IN")}</p>
         }
       },
       {
@@ -59,7 +59,7 @@ function page() {
         accessorKey: "procedure",
         cell: (info) => {
           const value = info.getValue();
-          return <p className=''>{Number(value)?.toLocaleString("en-IN")}</p>
+          return <p >{Number(value)?.toLocaleString("en-IN")}</p>
         }
       },
       {
@@ -67,7 +67,7 @@ function page() {
         accessorKey: "revenuePerPatient",
         cell: (info) => {
           const value = info.getValue();
-          return <p className=''>{Number(value)?.toLocaleString("en-IN")}</p>
+          return <p >{Number(value)?.toLocaleString("en-IN")}</p>
         }
       },
     ],

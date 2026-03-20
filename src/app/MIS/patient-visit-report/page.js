@@ -11,6 +11,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Settings } from "lucide-react";
+import { TableWrapper } from "@/components/shared/TableWrapper";
 
 export default function PatientVisitReportPage() {
   const [filters, setFilters] = useState({
@@ -138,9 +139,9 @@ export default function PatientVisitReportPage() {
       </div>
 
       {/* Table */}
-      <div className="bg-card rounded-lg border border-border overflow-hidden shadow-sm">
+      <TableWrapper>
         <div className="overflow-x-auto">
-          <table className="w-full text-sm text-left">
+          <table className="w-full text-sm text-left border-0">
             <thead className="bg-medivardaan-teal/10 dark:bg-accent text-foreground font-semibold border-b border-border">
               <tr>
                 <th className="p-4 w-16">Sr No.</th>
@@ -155,7 +156,7 @@ export default function PatientVisitReportPage() {
               {reportData.map((row) => (
                 <tr
                   key={row.srNo}
-                  className="hover:bg-muted/50 transition-colors bg-card text-card-foreground"
+                  className="border-t border-gray-200 dark:border-[#443C68]/50 hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
                 >
                   <td className="p-4 font-medium text-foreground">
                     {row.srNo}
@@ -172,7 +173,7 @@ export default function PatientVisitReportPage() {
             </tbody>
           </table>
         </div>
-      </div>
+      </TableWrapper>
     </div>
   );
 }

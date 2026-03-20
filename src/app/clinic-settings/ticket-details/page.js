@@ -19,6 +19,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { TableWrapper } from "@/components/shared/TableWrapper";
 
 export default function TicketDetails() {
   const [issueTypeFilter, setIssueTypeFilter] = useState("");
@@ -182,10 +183,10 @@ export default function TicketDetails() {
         </div>
 
       {/* Table */}
-       <div className="border border-gray-200 dark:border-[#443C68]/50 rounded-t-lg overflow-hidden overflow-x-auto">
-        <Table>
-          <TableHeader className="bg-primary/10 dark:bg-[#393053]">
-            <TableRow className="hover:bg-primary/10 dark:hover:bg-[#443C68]/50 border-gray-200 dark:border-[#443C68]/50">
+       <TableWrapper className="overflow-x-auto">
+        <Table className="border-0">
+          <TableHeader >
+            <TableRow >
               <TableHead className="font-bold text-gray-700 dark:text-white/75 w-[60px]">Sr. No.</TableHead>
               <TableHead className="font-bold text-gray-700 dark:text-white/75 w-[100px]">Date</TableHead>
               <TableHead className="font-bold text-gray-700 dark:text-white/75">User Name</TableHead>
@@ -201,7 +202,7 @@ export default function TicketDetails() {
           </TableHeader>
           <TableBody>
             {filteredTickets.map((row, index) => (
-              <TableRow key={row.id} className="border-gray-200 dark:border-[#443C68]/50 dark:hover:bg-[#393053]/50">
+              <TableRow key={row.id} >
                 <TableCell className="dark:text-white/75">{index + 1}</TableCell>
                 <TableCell className="dark:text-white/75 whitespace-nowrap">{row.date}</TableCell>
                 <TableCell className="dark:text-white/75">{row.userName}</TableCell>
@@ -240,7 +241,7 @@ export default function TicketDetails() {
             )}
           </TableBody>
         </Table>
-      </div>
+      </TableWrapper>
 
          {/* Footer / Pagination */}
        <div className="flex justify-end items-center pt-2">

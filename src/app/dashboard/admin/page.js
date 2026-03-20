@@ -50,6 +50,7 @@ import {
 } from "@tanstack/react-table";
 import GenericTable from "@/components/common/GenericTable";
 import { Spinner } from "@/components/ui/spinner";
+import { TableWrapper } from "@/components/shared/TableWrapper";
 import { useUser } from "@/hooks/useUser";
 // import { useDashboardData } from "@/hooks/useDashboardData";
 
@@ -580,6 +581,7 @@ export default function DashboardPage() {
                                 <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-4">
                                     Expenditure Breakdown
                                 </h3>
+                                <TableWrapper>
                                 <table className="w-full text-sm text-gray-700 dark:text-white/75">
                                     <thead>
                                         <tr className="border-b border-gray-300 dark:border-[#635985]/40 text-left">
@@ -588,20 +590,21 @@ export default function DashboardPage() {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>Utilities</td>
+                                        <tr className="border-b border-gray-300 dark:border-[#635985]/40 text-left">
+                                            <td className="py-2">Utilities</td>
                                             <td>₹25,000</td>
                                         </tr>
-                                        <tr>
-                                            <td>Equipment</td>
+                                        <tr className="border-b border-gray-300 dark:border-[#635985]/40 text-left">
+                                            <td className="py-2">Equipment</td>
                                             <td>₹40,000</td>
                                         </tr>
                                         <tr>
-                                            <td>Staff Salaries</td>
+                                            <td className="py-2">Staff Salaries</td>
                                             <td>₹1,20,000</td>
                                         </tr>
                                     </tbody>
                                 </table>
+                                </TableWrapper>
                             </CardContent>
                         </Card>
                     </section>
@@ -630,72 +633,74 @@ export default function DashboardPage() {
               <tr><td>South</td><td>24</td><td>16</td><td>₹0.2L</td><td>₹0.2L</td><td>₹0.1L</td></tr>
             </tbody>
           </table> */}
-                            <Table className="overflow-x-auto border border-black/40 dark:border-white/40">
-                                {/* <TableCaption>A list of your recent invoices.</TableCaption> */}
-                                <TableHeader>
-                                    <TableRow className="bg-primary/10 hover:bg-primary/20 border-b-2 border-black/40 dark:border-white/40">
-                                        <TableHead className="w-[100px]">
-                                            Branch
-                                        </TableHead>
-                                        <TableHead className="text-right">
-                                            Patients
-                                        </TableHead>
-                                        <TableHead className="text-right">
-                                            Procedures
-                                        </TableHead>
-                                        <TableHead className="text-right">
-                                            Turnover
-                                        </TableHead>
-                                        <TableHead className="text-right">
-                                            Expenditure
-                                        </TableHead>
-                                        <TableHead className="text-right">
-                                            Inventory
-                                        </TableHead>
-                                    </TableRow>
-                                </TableHeader>
-                                <TableBody>
-                                    {invoices.map((invoice, index) => (
-                                        <TableRow
-                                            key={index}
-                                            className="border-b border-black/20 dark:border-white/20"
-                                        >
-                                            <TableCell className="font-medium">
-                                                {invoice.branch}
+                            <TableWrapper contentClassName="p-0 border border-black/40 dark:border-white/40">
+                                <Table className="overflow-x-auto border-0">
+                                    {/* <TableCaption>A list of your recent invoices.</TableCaption> */}
+                                    <TableHeader>
+                                        <TableRow className="bg-primary/20 hover:bg-primary/20 border-b-2 border-black/40 dark:border-white/40">
+                                            <TableHead className="w-[100px]">
+                                                Branch
+                                            </TableHead>
+                                            <TableHead className="text-right">
+                                                Patients
+                                            </TableHead>
+                                            <TableHead className="text-right">
+                                                Procedures
+                                            </TableHead>
+                                            <TableHead className="text-right">
+                                                Turnover
+                                            </TableHead>
+                                            <TableHead className="text-right">
+                                                Expenditure
+                                            </TableHead>
+                                            <TableHead className="text-right">
+                                                Inventory
+                                            </TableHead>
+                                        </TableRow>
+                                    </TableHeader>
+                                    <TableBody>
+                                        {invoices.map((invoice, index) => (
+                                            <TableRow
+                                                key={index}
+                                                className="border-b border-black/20 dark:border-white/20"
+                                            >
+                                                <TableCell className="font-medium">
+                                                    {invoice.branch}
+                                                </TableCell>
+                                                <TableCell className="text-right">
+                                                    {invoice.patients}
+                                                </TableCell>
+                                                <TableCell className="text-right">
+                                                    {invoice.procedures}
+                                                </TableCell>
+                                                <TableCell className="text-right">
+                                                    {invoice.turnover}
+                                                </TableCell>
+                                                <TableCell className="text-right">
+                                                    {invoice.expenditure}
+                                                </TableCell>
+                                                <TableCell className="text-right">
+                                                    {invoice.inventory}
+                                                </TableCell>
+                                            </TableRow>
+                                        ))}
+                                    </TableBody>
+                                    <TableFooter className=" border-black/40 dark:border-white/40">
+                                        <TableRow>
+                                            <TableCell colSpan={3}>Total</TableCell>
+                                            <TableCell className="text-right">
+                                                ₹2.8L
                                             </TableCell>
                                             <TableCell className="text-right">
-                                                {invoice.patients}
+                                                ₹1.4L
                                             </TableCell>
                                             <TableCell className="text-right">
-                                                {invoice.procedures}
-                                            </TableCell>
-                                            <TableCell className="text-right">
-                                                {invoice.turnover}
-                                            </TableCell>
-                                            <TableCell className="text-right">
-                                                {invoice.expenditure}
-                                            </TableCell>
-                                            <TableCell className="text-right">
-                                                {invoice.inventory}
+                                                ₹0.75L
                                             </TableCell>
                                         </TableRow>
-                                    ))}
-                                </TableBody>
-                                <TableFooter className=" border-black/40 dark:border-white/40">
-                                    <TableRow>
-                                        <TableCell colSpan={3}>Total</TableCell>
-                                        <TableCell className="text-right">
-                                            ₹2.8L
-                                        </TableCell>
-                                        <TableCell className="text-right">
-                                            ₹1.4L
-                                        </TableCell>
-                                        <TableCell className="text-right">
-                                            ₹0.75L
-                                        </TableCell>
-                                    </TableRow>
-                                </TableFooter>
-                            </Table>
+                                    </TableFooter>
+                                </Table>
+                            </TableWrapper>
                         </CardContent>
                     </Card>
                 </div>

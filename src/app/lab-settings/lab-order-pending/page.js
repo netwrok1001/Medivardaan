@@ -171,10 +171,10 @@ export default function LabOrderPending() {
 
 
       {/* Table */}
-       <div className="border border-gray-200 dark:border-[#443C68]/50 rounded-t-lg overflow-hidden overflow-x-auto">
+       <div className="overflow-x-auto">
         <Table>
-          <TableHeader className="bg-primary/10 dark:bg-[#393053]">
-            <TableRow className="hover:bg-primary/10 dark:hover:bg-[#443C68]/50 border-gray-200 dark:border-[#443C68]/50">
+          <TableHeader >
+            <TableRow >
               <TableHead className="font-bold text-gray-700 dark:text-white/75 w-[60px]">Sr. No.</TableHead>
               <TableHead className="font-bold text-gray-700 dark:text-white/75">Clinic Name</TableHead>
               <TableHead className="font-bold text-gray-700 dark:text-white/75">Patient Name</TableHead>
@@ -187,7 +187,7 @@ export default function LabOrderPending() {
           <TableBody>
              {currentData.length > 0 ? (
                 currentData.map((row) => (
-              <TableRow key={row.id} className="border-gray-200 dark:border-[#443C68]/50 dark:hover:bg-[#393053]/50">
+              <TableRow key={row.id} >
                 <TableCell className="dark:text-white/75">{row.id}</TableCell>
                 <TableCell className="dark:text-white/75">{row.clinicName}</TableCell>
                 <TableCell className="dark:text-white/75">{row.patientName}</TableCell>

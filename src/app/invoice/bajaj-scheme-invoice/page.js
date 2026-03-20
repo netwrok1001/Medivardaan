@@ -260,7 +260,7 @@ export default function BajajSchemeInvoicePage() {
       <div className="border border-gray-200 dark:border-[#443C68]/50 rounded-sm overflow-hidden bg-white dark:bg-[#18122B] shadow-sm">
         <div className="overflow-x-auto">
           <Table>
-            <TableHeader className="bg-primary/10 dark:bg-[#393053]">
+            <TableHeader >
               <TableRow className="border-b border-gray-100 dark:border-[#443C68]/50 hover:bg-primary/10 dark:hover:bg-[#393053]">
                 <TableHead className="text-xs font-bold text-gray-700 dark:text-white/75 h-10">Sr. No.</TableHead>
                 <TableHead className="text-xs font-bold text-gray-700 dark:text-white/75 h-10">Clinic Name</TableHead>
@@ -276,7 +276,7 @@ export default function BajajSchemeInvoicePage() {
             </TableHeader>
             <TableBody>
               {currentItems.map((row, index) => (
-                <TableRow key={row.id} className="border-b border-gray-50 dark:border-[#443C68]/50 hover:bg-gray-50 dark:bg-[#18122B] dark:hover:bg-[#393053]/50 text-xs">
+                <TableRow key={row.id} className="text-xs">
                   <TableCell className="py-2 text-gray-600 dark:text-white/75">{indexOfFirstItem + index + 1}</TableCell>
                   <TableCell className="py-2 text-gray-600 dark:text-white/75">{row.clinicName}</TableCell>
                   <TableCell className="py-2 text-gray-600 dark:text-white/75">{row.patientCode}</TableCell>

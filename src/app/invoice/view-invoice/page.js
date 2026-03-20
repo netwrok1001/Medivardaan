@@ -216,7 +216,7 @@ export default function ViewInvoicePage() {
                </div>
             ) : (
             <Table>
-              <TableHeader className="bg-primary/10 dark:bg-[#393053]">
+              <TableHeader >
                 <TableRow className="border-b border-gray-100 dark:border-[#443C68]/50 hover:bg-primary/10 dark:hover:bg-[#393053]">
                   <TableHead className="font-bold text-gray-700 dark:text-white/75 h-10">Sr. No.</TableHead>
                   <TableHead className="font-bold text-gray-700 dark:text-white/75 h-10">Invoice No.</TableHead>

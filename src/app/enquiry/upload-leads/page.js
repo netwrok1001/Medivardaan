@@ -15,6 +15,7 @@ import { Settings, Home, Plus } from "lucide-react"
 import Link from "next/link"
 import CustomPagination from "@/components/ui/custom-pagination"
 import { PageHeader } from "@/components/shared/PageHeader"
+import { TableWrapper } from "@/components/shared/TableWrapper"
 
 export default function UploadLeadsPage() {
   // Dummy data
@@ -133,11 +134,11 @@ export default function UploadLeadsPage() {
       </div>
 
       {/* Results Table */}
-      <div className="rounded-md border dark:border-[#443C68]/50 bg-white dark:bg-[#18122B] shadow-sm overflow-hidden flex flex-col">
+      <TableWrapper className="flex flex-col">
         {/* We need horizontal scroll for this table due to many columns */}
         <div className="overflow-x-auto">
-            <Table style={{ minWidth: '2500px' }}>
-            <TableHeader className="bg-primary/10 dark:bg-primary/20">
+            <Table style={{ minWidth: '2500px' }} className="border-0">
+            <TableHeader >
                 <TableRow className="dark:border-[#443C68]/50">
                 <TableHead className="w-[50px] font-bold text-primary dark:text-primary border-r border-primary/20">Sr. No.</TableHead>
                 <TableHead className="font-bold text-primary dark:text-primary w-[100px] border-r border-primary/20">Enquiry Date</TableHead>
@@ -213,7 +214,7 @@ export default function UploadLeadsPage() {
                 onPageChange={handlePageChange}
             />
         </div>
-      </div>
+      </TableWrapper>
     </div>
   )
 }

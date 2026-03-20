@@ -967,7 +967,7 @@ export default function DoctorRegistrationPage() {
 
           <div className="border border-gray-200 dark:border-[#443C68]/50 rounded-lg overflow-hidden">
             <Table>
-              <TableHeader className="bg-primary/10 dark:bg-[#393053]">
+              <TableHeader >
                 <TableRow className="hover:bg-primary/10">
                   <TableHead className="font-bold text-gray-700 dark:text-white/75">
                     Dr ID

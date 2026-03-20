@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Settings } from "lucide-react";
+import { TableWrapper } from "@/components/shared/TableWrapper";
 
 export default function PatientMergeDeletePage() {
   const [mobileNumber, setMobileNumber] = useState("");
@@ -103,8 +104,8 @@ export default function PatientMergeDeletePage() {
                     Select records to merge into primary
                   </p>
                 </div>
-                <div className="p-0 flex-grow">
-                  <table className="w-full text-sm text-left">
+                <TableWrapper className="flex-grow rounded-none border-0 shadow-none border-t border-border">
+                  <table className="w-full text-sm text-left border-0">
                     <thead className="bg-muted/50 text-muted-foreground font-medium text-xs uppercase tracking-wider">
                       <tr>
                         <th className="p-3 font-medium">Sr. No.</th>
@@ -117,14 +118,14 @@ export default function PatientMergeDeletePage() {
                       <tr>
                         <td
                           colSpan={4}
-                          className="p-8 text-center text-muted-foreground italic"
+                          className="p-8 text-center text-muted-foreground italic border-0"
                         >
                           No records available for merging
                         </td>
                       </tr>
                     </tbody>
                   </table>
-                </div>
+                </TableWrapper>
               </div>
             </div>
           )}

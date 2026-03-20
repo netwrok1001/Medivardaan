@@ -75,10 +75,10 @@ axiosClient.interceptors.response.use(
             // Handle specific HTTP status codes
             switch (error.response.status) {
                 case 400:
-                    toast.error(`Error: ${errorMessage}`);
+                    if (typeof window !== 'undefined') toast.error(`Error: ${errorMessage}`);
                     break;
                 case 401:
-                    toast.error("Session expired. Please login again.");
+                    if (typeof window !== 'undefined') toast.error("Session expired. Please login again.");
                     // Only access localStorage in browser environment
                     if (typeof window !== 'undefined' && window.localStorage) {
                         localStorage.removeItem("token");
@@ -91,27 +91,27 @@ axiosClient.interceptors.response.use(
                     }
                     break;
                 case 403:
-                    toast.error("Access Forbidden. You do not have permission.");
+                    if (typeof window !== 'undefined') toast.error("Access Forbidden. You do not have permission.");
                     break;
                 case 404:
                     // Suppress 404 toasts for specific endpoints if needed, but generally good to show
                     console.error("❌ 404 Endpoint not found.");
-                    // toast.error("Resource not found (404)."); 
+                    // if (typeof window !== 'undefined') toast.error("Resource not found (404)."); 
                     break;
                 case 500:
-                    toast.error("Internal Server Error. Please contact support.");
+                    if (typeof window !== 'undefined') toast.error("Internal Server Error. Please contact support.");
                     break;
                 default:
-                    toast.error(`Error ${error.response.status}: ${errorMessage}`);
+                    if (typeof window !== 'undefined') toast.error(`Error ${error.response.status}: ${errorMessage}`);
                     break;
             }
         } else if (error.request) {
             // Request made but no response received
             console.error('[Axios Network Error]', error.request);
-            toast.error("Network Error. Please check your internet connection.");
+            if (typeof window !== 'undefined') toast.error("Network Error. Please check your internet connection.");
         } else {
             console.error('[Axios Error]', error.message);
-            toast.error("An error occurred while setting up the request.");
+            if (typeof window !== 'undefined') toast.error("An error occurred while setting up the request.");
         }
         return Promise.reject(error);
     }

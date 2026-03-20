@@ -138,7 +138,7 @@ export default function PendingFollowupsPage() {
         </div>
         
         <Table>
-          <TableHeader className="bg-[#0f7396]/10 dark:bg-[#635985]/20">
+          <TableHeader className="bg-primary/20 dark:bg-[#635985]/20">
             <TableRow className="dark:border-[#443C68]/50">
               <TableHead className="w-[80px] font-bold text-[#0f7396] dark:text-[#635985]">Sr. No.</TableHead>
               <TableHead className="font-bold text-[#0f7396] dark:text-[#635985]">Visitor Name</TableHead>

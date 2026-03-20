@@ -110,7 +110,7 @@ const UserAccessPage = () => {
             {selectedRole && (
                 <div className="rounded-md border border-gray-200 dark:border-[#443C68]/50 overflow-hidden">
                     <Table>
-                        <TableHeader className="bg-primary/10 dark:bg-primary/20">
+                        <TableHeader >
                             <TableRow className="border-b border-gray-200 dark:border-[#443C68]/50 hover:bg-transparent">
                             <TableHead className="w-[300px] text-gray-700 dark:text-white/90 font-bold">Module Name</TableHead>
                             <TableHead className="text-center text-gray-700 dark:text-white/90 font-bold">View</TableHead>

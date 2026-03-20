@@ -102,7 +102,7 @@ export default function NewAppointmentPage() {
     <div className="min-h-screen bg-gray-50 dark:bg-[#18122B] py-6 px-4">
       <div className="max-w-5xl mx-auto">
         <Card className="border border-gray-200 dark:border-[#443C68]/50 shadow-md bg-white dark:bg-[#393053]">
-          <CardHeader className="p-4 bg-primary/10 dark:bg-primary/20 border-b border-primary/20 dark:border-primary/30">
+          <CardHeader className="p-4 bg-primary/10 dark:bg-white/15 border-b border-primary/20 dark:border-primary/30">
             <h2 className="text-lg font-semibold text-primary dark:text-primary flex items-center gap-2">
               <Calendar className="w-5 h-5" /> BOOK APPOINTMENT
             </h2>

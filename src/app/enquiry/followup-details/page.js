@@ -145,7 +145,7 @@ export default function FollowupDetailsPage() {
           <div className="mt-4">
             <Table>
               <TableBody>
-                <TableRow className="bg-[#0f7396]/10 dark:bg-[#635985]/20 border-b border-[#0f7396]/20">
+                <TableRow className="bg-primary/20 dark:bg-[#635985]/20 border-b border-[#0f7396]/20">
                   <TableCell className="font-semibold text-[#0f7396] dark:text-[#635985]">Sr. No.</TableCell>
                   <TableCell className="font-semibold text-[#0f7396] dark:text-[#635985]">Conversation Date</TableCell>
                   <TableCell className="font-semibold text-[#0f7396] dark:text-[#635985]">Follow up Mode</TableCell>

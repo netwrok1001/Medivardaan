@@ -184,7 +184,7 @@ export default function AccountantExpensePage() {
       </div>
 
       {/* Table */}
-      <div className="border border-gray-200 dark:border-[#443C68]/50 rounded-t-lg overflow-hidden overflow-x-auto">
+      <div className="overflow-x-auto">
         <Table>
           <TableHeader className="bg-[#e6ffcc] dark:bg-[#e6ffcc]/20">
             <TableRow className="hover:bg-transparent">

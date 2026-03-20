@@ -194,7 +194,7 @@ const EnquirySettingsPage = () => {
           {/* Table */}
           <div className="rounded-md border border-gray-200 dark:border-white/20 overflow-hidden">
             <Table>
-              <TableHeader className="bg-primary/10 dark:bg-[#2f254e]">
+              <TableHeader className="bg-primary/20 dark:bg-[#2f254e]">
                 <TableRow className="border-b border-gray-200 dark:border-[#443C68]/50 hover:bg-transparent">
                   <TableHead className="w-24 text-gray-700 dark:text-white/90 font-semibold">
                     Sr. No.

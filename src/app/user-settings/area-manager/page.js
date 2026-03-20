@@ -156,7 +156,7 @@ const AreaManagerPage = () => {
           {/* Table */}
           <div className="rounded-md border border-gray-200 dark:border-[#443C68]/50 overflow-hidden">
             <Table>
-              <TableHeader className="bg-primary/10 dark:bg-primary/20">
+              <TableHeader >
                 <TableRow className="border-b border-gray-200 dark:border-[#443C68]/50 hover:bg-transparent">
                   <TableHead className="w-16 text-gray-700 dark:text-white/90 font-bold">Sr No.</TableHead>
                   <TableHead className="text-gray-700 dark:text-white/90 font-bold">Area Manager</TableHead>

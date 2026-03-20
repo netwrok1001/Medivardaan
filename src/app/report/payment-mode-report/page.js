@@ -20,6 +20,7 @@ import {
 import { FileSpreadsheet, Settings } from "lucide-react";
 import { exportToExcel } from "@/utils/exportToExcel";
 import CustomPagination from "@/components/ui/custom-pagination";
+import { TableWrapper } from "@/components/shared/TableWrapper";
 
 export default function PaymentModeReportPage() {
   const [clinicName, setClinicName] = useState("");
@@ -241,9 +242,9 @@ export default function PaymentModeReportPage() {
        </div>
 
       {/* Table */}
-      <div className="border border-gray-200 dark:border-[#443C68]/50 rounded-t-lg overflow-x-auto">
-        <Table className="w-full">
-          <TableHeader className="bg-primary/10 dark:bg-[#e6ffcc]/20">
+      <TableWrapper>
+        <Table className="w-full border-0">
+          <TableHeader className="bg-primary/20 dark:bg-[#e6ffcc]/20">
             <TableRow className="hover:bg-transparent">
               <TableHead className="min-w-[100px] font-bold text-gray-800 dark:text-white/90 border-r border-white dark:border-[#635985]/40">Month</TableHead>
               <TableHead className="min-w-[100px] font-bold text-gray-800 dark:text-white/90 border-r border-white dark:border-[#635985]/40">Cash</TableHead>
@@ -302,7 +303,7 @@ export default function PaymentModeReportPage() {
             )}
           </TableBody>
         </Table>
-      </div>
+      </TableWrapper>
       
        {/* Footer / Pagination / Export */}
       <div className="flex justify-between items-center mt-4">

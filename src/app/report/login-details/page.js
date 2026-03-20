@@ -157,8 +157,8 @@ export default function LoginDetailsPage() {
             {/* Table */}
             <div className="border border-gray-200 dark:border-[#443C68]/50 rounded-t-lg overflow-hidden">
                 <Table>
-                <TableHeader className="bg-primary/10 dark:bg-[#393053]">
-                    <TableRow className="hover:bg-primary/10 dark:hover:bg-[#443C68]/50 border-gray-200 dark:border-[#443C68]/50">
+                <TableHeader >
+                    <TableRow >
                     <TableHead className="font-bold text-gray-700 dark:text-white/75 w-[60px]">Sr. No.</TableHead>
                     <TableHead className="font-bold text-gray-700 dark:text-white/75">Name</TableHead>
                     <TableHead className="font-bold text-gray-700 dark:text-white/75">User Name</TableHead>
@@ -168,7 +168,7 @@ export default function LoginDetailsPage() {
                 </TableHeader>
                 <TableBody>
                     {currentItems.map((item, index) => (
-                    <TableRow key={item.id} className="border-gray-200 dark:border-[#443C68]/50 dark:hover:bg-[#393053]/50">
+                    <TableRow key={item.id} >
                         <TableCell className="dark:text-white/75">{indexOfFirstItem + index + 1}</TableCell>
                         <TableCell className="dark:text-white/75">{item.name}</TableCell>
                         <TableCell className="dark:text-white/75">{item.username}</TableCell>

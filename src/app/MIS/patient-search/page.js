@@ -15,6 +15,7 @@ import { Eye, Edit, Settings } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { patientService } from "@/api/patient";
 import CustomPagination from "@/components/ui/custom-pagination";
+import { TableWrapper } from "@/components/shared/TableWrapper";
 
 export default function PatientSearchPage() {
   const router = useRouter();
@@ -199,7 +200,7 @@ export default function PatientSearchPage() {
             </div>
 
             {/* Patient List Table */}
-            <div className="border border-gray-200 dark:border-[#443C68]/50 rounded-lg overflow-hidden bg-white dark:bg-[#18122B] mt-6">
+            <TableWrapper className="mt-6">
               <div className="flex justify-end p-2 border-b border-gray-200 dark:border-[#443C68]/50">
                 <p className="text-sm text-gray-500 dark:text-white/70">
                   Total: <span className="font-semibold">{totalItems}</span>
@@ -208,8 +209,8 @@ export default function PatientSearchPage() {
               <div className="overflow-x-auto">
                 <table className="w-full text-sm">
                   <thead>
-                    <tr className="bg-primary/10 dark:bg-primary/20">
-                      <th className="px-4 py-3 text-left font-medium text-gray-700 dark:text-white/90">
+                    <tr className="border-b border-gray-200 dark:border-[#443C68]/50">
+                      <th className="p-3 text-left text-sm font-semibold text-gray-700 dark:text-white/90 whitespace-nowrap">
                         Sr. No.
                       </th>
                       <th className="px-4 py-3 text-left font-medium text-gray-700 dark:text-white/90">
@@ -245,10 +246,10 @@ export default function PatientSearchPage() {
                     ) : patientsList.length > 0 ? (
                       patientsList.map((patient, index) => (
                         <tr
-                          key={patient.patientID || patient.id || index}
-                          className="border-t border-gray-200 dark:border-[#443C68]/50 hover:bg-gray-50 dark:bg-[#18122B] dark:hover:bg-[#393053] transition-colors"
+                          key={patient.id}
+                          className="border-t border-gray-200 dark:border-[#443C68]/50 hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
                         >
-                          <td className="px-4 py-3 text-gray-800 dark:text-white/90">
+                          <td className="p-3 text-sm text-gray-800 dark:text-white/90">
                             {(currentPage - 1) * pageSize + index + 1}
                           </td>
                           <td className="px-4 py-3 text-gray-800 dark:text-white/90">
@@ -313,7 +314,7 @@ export default function PatientSearchPage() {
                 currentPage={currentPage}
                 onPageChange={setCurrentPage}
               />
-            </div>
+            </TableWrapper>
           </CardContent>
         </Card>
       </div>

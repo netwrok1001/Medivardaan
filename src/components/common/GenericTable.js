@@ -20,6 +20,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ArrowUp, ArrowDown, ArrowUpDown } from "lucide-react";
+import { TableWrapper } from "@/components/shared/TableWrapper";
 
 export default function GenericTable({
   columns,
@@ -58,8 +59,9 @@ export default function GenericTable({
       </div> */}
 
       {/* 🧭 Table */}
-      <div className={`overflow-auto overflow-y-hidden border rounded-lg max-h-[70vh] ${borderColorClass}`}>
-        <Table className={`border ${borderColorClass}`}>
+      <TableWrapper contentClassName="overflow-auto overflow-y-hidden max-h-[70vh]">
+
+          <Table className="border-0">
           {/* ===================== TABLE HEADER ===================== */}
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
@@ -77,7 +79,7 @@ export default function GenericTable({
                   return (
                     <TableHead
                       key={header.id}
-                      className={`${isRplColumn ? "text-left" : "text-right"} border ${borderColorClass} bg-[#0f7396]/10 dark:bg-[#443C68]`}
+                      className={`${isRplColumn ? "text-left" : "text-right"} border ${borderColorClass} `}
                     >
                       {header.isPlaceholder ? null : column.getCanSort() &&
                         showSorting ? (
@@ -129,7 +131,7 @@ export default function GenericTable({
           <TableBody>
             {table.getRowModel().rows?.length ? (
               table.getRowModel().rows.map((row) => (
-                <TableRow key={row.id}>
+                <TableRow key={row.id} >
                   {row.getVisibleCells().map((cell) => {
                     const isRplColumn =
                       cell.column.id === "rpl" ||
@@ -163,7 +165,7 @@ export default function GenericTable({
             )}
           </TableBody>
         </Table>
-      </div>
+      </TableWrapper>
 
       {/* ===================== PAGINATION ===================== */}
       {showPagination && (

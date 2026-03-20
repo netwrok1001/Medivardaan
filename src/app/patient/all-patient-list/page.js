@@ -12,9 +12,10 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { patientService } from "@/api/client/patients";
 import { Pagination } from "@/components/Pagination";
 import { Card, CardContent } from "@/components/ui/card";
+import { TableWrapper } from "@/components/shared/TableWrapper";
+import { patientService } from "@/api/patient";
 
 export default function AllPatientListPage() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -157,7 +158,7 @@ export default function AllPatientListPage() {
             </div>
 
             {/* Patients Table */}
-            <div className="border border-gray-200 dark:border-[#443C68]/50 rounded-lg overflow-hidden bg-white dark:bg-[#18122B]">
+            <TableWrapper>
               {loading ? (
                 <div className="p-8 text-center text-muted-foreground">
                   Loading patients...
@@ -167,7 +168,7 @@ export default function AllPatientListPage() {
               ) : (
                 <table className="w-full">
                   <thead>
-                    <tr className="bg-primary/10 dark:bg-primary/20">
+                    <tr className="border-b border-gray-200 dark:border-[#443C68]/50">
                       <th className="px-4 py-3 text-left text-sm font-medium text-gray-700 dark:text-white/90">
                         Sr. No.
                       </th>
@@ -196,7 +197,7 @@ export default function AllPatientListPage() {
                       currentItems.map((patient, index) => (
                         <tr
                           key={patient.patientID || patient.PatientID || index}
-                          className="border-t border-gray-200 dark:border-[#443C68]/50 hover:bg-gray-50 dark:bg-[#18122B] dark:hover:bg-[#393053] transition-colors"
+                          className="border-t border-gray-200 dark:border-[#443C68]/50 hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
                         >
                           <td className="px-4 py-3 text-sm text-gray-800 dark:text-white/90">
                             {(currentPage - 1) * itemsPerPage + index + 1}
@@ -256,7 +257,7 @@ export default function AllPatientListPage() {
                   </tbody>
                 </table>
               )}
-            </div>
+            </TableWrapper>
 
             {/* Pagination Controls */}
             {!loading && (

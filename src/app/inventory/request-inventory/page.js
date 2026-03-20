@@ -113,7 +113,7 @@ export default function RequestInventory() {
       {/* Dynamic Table */}
       <div className="border border-gray-200 dark:border-[#443C68]/50 rounded-t-lg overflow-hidden overflow-x-auto bg-primary/5 dark:bg-[#393053]/20 p-2">
         <Table>
-          <TableHeader className="bg-primary/10">
+          <TableHeader className="bg-primary/20">
             <TableRow className="border-b-0 hover:bg-primary/10">
               <TableHead className="font-bold text-gray-800 dark:text-white/90 min-w-[200px]">Inventory Type</TableHead>
               <TableHead className="font-bold text-gray-800 dark:text-white/90 min-w-[200px]">Item Name</TableHead>

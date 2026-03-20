@@ -31,6 +31,7 @@ import {
 import { upsertConsultation } from "@/api/consultation";
 import { patientService } from "@/api/client/patients";
 import { toast } from "sonner";
+import { TableWrapper } from "@/components/shared/TableWrapper";
 
 export default function ConsultationPage() {
   const printRef = useRef(null);
@@ -380,7 +381,7 @@ export default function ConsultationPage() {
 
         {/* Consultation Section */}
         <Card className="border border-gray-200 dark:border-[#443C68]/50 shadow-sm bg-white dark:bg-[#18122B]">
-          <CardHeader className="p-5 bg-primary/10 dark:bg-primary/20 border-b border-primary/20 dark:border-primary/30">
+          <CardHeader className="p-5 bg-primary/10 dark:bg-white/15 border-b border-primary/20 dark:border-primary/30">
             <h2 className="text-lg font-semibold text-primary dark:text-medivardaan-purple">
               Consultation Details
             </h2>
@@ -518,10 +519,10 @@ export default function ConsultationPage() {
                 Medicines
               </Label>
 
-              <div className="overflow-x-auto rounded-lg border border-gray-200 dark:border-[#443C68]/50 bg-white dark:bg-[#18122B]">
-                <table className="w-full text-sm">
+              <TableWrapper className="rounded-lg border border-gray-200 dark:border-[#443C68]/50 shadow-none border-0 overflow-hidden" contentClassName="p-0 overflow-x-auto">
+                <table className="w-full text-sm border-0">
                   <thead>
-                    <tr className="bg-primary/10 dark:bg-primary/20">
+                    <tr >
                       <th className="p-2 text-left font-medium text-gray-700 dark:text-white/90 min-w-[140px]">
                         Type
                       </th>
@@ -786,7 +787,7 @@ export default function ConsultationPage() {
                     ))}
                   </tbody>
                 </table>
-              </div>
+              </TableWrapper>
 
               {/* Add New Button */}
               <div className="flex justify-end print:hidden">

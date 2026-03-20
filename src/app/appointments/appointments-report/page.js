@@ -146,7 +146,7 @@ export default function AppointmentsReportPage() {
           </TableHeader>
           <TableBody>
             {currentItems.map((item, index) => (
-              <TableRow key={item.id} className="border-gray-200 dark:border-[#443C68]/50 dark:hover:bg-[#393053]/50">
+              <TableRow key={item.id} >
                 <TableCell className="dark:text-white/75">{indexOfFirstItem + index + 1}</TableCell>
                 <TableCell className="dark:text-white/75">{item.name}</TableCell>
                 <TableCell className="dark:text-white/75">{item.mobile}</TableCell>

@@ -184,6 +184,39 @@
   }
 
   .card-gradient {
-    @apply bg-gradient-to-br from-medivardaan-teal-light/20 via-medivardaan-teal-light/10 to-medivardaan-blue-light/15 dark:bg-gradient-to-br dark:from-medivardaan-purple-dark/10 dark:via-medivardaan-purple-light/20 dark:to-medivardaan-purple-dark/30 backdrop-blur-sm border border-medivardaan-teal-light/50 dark:border-medivardaan-purple-light/70;
+    @apply bg-gradient-to-br from-medivardaan-teal-light/20 via-medivardaan-teal-light/10 to-medivardaan-blue-light/15 dark:bg-gradient-to-br dark:from-[#393053]/80 dark:via-[#393053]/50 dark:to-[#393053]/70 backdrop-blur-md border border-medivardaan-teal-light/50 dark:border-medivardaan-purple-light/50 rounded-lg overflow-hidden shadow-sm;
+  }
+
+  /* ── Table internals inherit from card-gradient ────────────────────────────
+     Any table (shadcn Table, plain <table>) inside a .card-gradient wrapper
+     picks up these styles automatically. Edit here to change every table. */
+
+  .card-gradient table,
+  .card-gradient [data-slot="table"] {
+    @apply w-full border-collapse;
+  }
+
+  /* Header row background */
+  .card-gradient thead tr,
+  .card-gradient [data-slot="table-header"] tr {
+    @apply bg-primary/20 dark:bg-white/15 border-b border-gray-200 dark:border-[#443C68]/50;
+  }
+
+  /* Header cells */
+  .card-gradient thead th,
+  .card-gradient [data-slot="table-head"] {
+    @apply text-gray-700 dark:text-white/90 font-semibold;
+  }
+
+  /* Body rows – transparent so gradient shows through */
+  .card-gradient tbody tr,
+  .card-gradient [data-slot="table-row"] {
+    @apply border-b border-gray-200 dark:border-[#443C68]/50 hover:bg-black/5 dark:hover:bg-white/5 transition-colors;
+  }
+
+  /* Body cells */
+  .card-gradient tbody td,
+  .card-gradient [data-slot="table-cell"] {
+    @apply text-gray-800 dark:text-white/90;
   }
 }

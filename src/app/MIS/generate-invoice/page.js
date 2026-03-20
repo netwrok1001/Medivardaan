@@ -11,6 +11,7 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import { Settings, Trash2, Plus } from "lucide-react"
+import { TableWrapper } from "@/components/shared/TableWrapper"
 
 const TREATMENT_OPTIONS = [
     { id: "t1", name: "Consultation", cost: 500 },
@@ -124,10 +125,10 @@ export default function GenerateInvoicePage() {
       </div>
 
       {/* Dynamic Table */}
-      <div className="bg-card rounded-xl border border-border overflow-hidden shadow-sm">
+      <TableWrapper>
         <div className="overflow-x-auto">
-            <table className="w-full text-sm text-left">
-                <thead className="bg-primary/10 dark:bg-accent text-foreground">
+            <table className="w-full text-sm text-left border-0">
+                <thead className="bg-primary/20 dark:bg-accent text-foreground">
                     <tr>
                         <th className="p-4 font-semibold w-[5%] text-center border-b border-border">Sr.No</th>
                         <th className="p-4 font-semibold w-[35%] border-b border-border">Treatment</th>
@@ -180,7 +181,7 @@ export default function GenerateInvoicePage() {
                 <Plus className="w-4 h-4 mr-2" /> Add New Row
             </Button>
         </div>
-      </div>
+      </TableWrapper>
 
       {/* Totals Section */}
       <div className="bg-card rounded-xl p-8 border border-border shadow-sm">

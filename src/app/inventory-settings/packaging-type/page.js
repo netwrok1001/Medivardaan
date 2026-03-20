@@ -12,6 +12,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { TableWrapper } from "@/components/shared/TableWrapper";
 import CustomPagination from "@/components/ui/custom-pagination";
 
 export default function PackagingType() {
@@ -110,10 +111,10 @@ export default function PackagingType() {
              <div className="text-sm text-gray-500 dark:text-white/50">Total : {filteredData.length}</div>
           </div>
 
-          <div className="border border-gray-200 dark:border-[#443C68]/50 rounded-t-lg overflow-hidden overflow-x-auto">
-            <Table>
-              <TableHeader className="bg-primary/10 dark:bg-[#393053]">
-                <TableRow className="hover:bg-primary/10 dark:hover:bg-[#443C68]/50 border-gray-200 dark:border-[#443C68]/50">
+          <TableWrapper className="overflow-x-auto">
+            <Table className="border-0">
+              <TableHeader >
+                <TableRow >
                   <TableHead className="font-bold text-gray-700 dark:text-white/75 w-[60px]">Sr. No.</TableHead>
                   <TableHead className="font-bold text-gray-700 dark:text-white/75">Packaging Type</TableHead>
                   <TableHead className="font-bold text-gray-700 dark:text-white/75 w-[100px] text-center">Action</TableHead>
@@ -122,7 +123,7 @@ export default function PackagingType() {
               <TableBody>
                 {currentItems.length > 0 ? (
                     currentItems.map((row, index) => (
-                    <TableRow key={row.id} className="border-gray-200 dark:border-[#443C68]/50 dark:hover:bg-[#393053]/50">
+                    <TableRow key={row.id} >
                         <TableCell className="dark:text-white/75">{indexOfFirstItem + index + 1}</TableCell>
                         <TableCell className="dark:text-white/75 font-medium">{row.packagingType}</TableCell>
                         <TableCell className="dark:text-white/75">
@@ -147,7 +148,7 @@ export default function PackagingType() {
                 )}
               </TableBody>
             </Table>
-          </div>
+          </TableWrapper>
 
           <div className="flex justify-between items-center pt-2">
              <div className="text-sm text-gray-500 dark:text-white/50 invisible">Spacing</div>

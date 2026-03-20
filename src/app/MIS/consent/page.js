@@ -11,6 +11,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Settings, Pencil, Eye, Trash2 } from "lucide-react";
+import { TableWrapper } from "@/components/shared/TableWrapper";
 
 export default function ConsentPage() {
   const [filters, setFilters] = useState({
@@ -131,9 +132,9 @@ export default function ConsentPage() {
       </div>
 
       {/* Table */}
-      <div className="bg-card rounded-lg border border-border overflow-hidden shadow-sm">
+      <TableWrapper>
         <div className="overflow-x-auto">
-          <table className="w-full text-sm text-left">
+          <table className="w-full text-sm text-left border-0">
             <thead className="bg-medivardaan-teal/10 dark:bg-accent text-foreground font-semibold border-b border-border">
               <tr>
                 <th className="p-4 w-16">Sr. No.</th>
@@ -177,7 +178,7 @@ export default function ConsentPage() {
             </tbody>
           </table>
         </div>
-      </div>
+      </TableWrapper>
     </div>
   );
 }

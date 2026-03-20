@@ -139,7 +139,7 @@ export default function Company() {
       </div>
 
       {/* Table */}
-      <div className="border border-gray-200 dark:border-[#443C68]/50 rounded-t-lg overflow-hidden overflow-x-auto">
+      <div className="overflow-x-auto">
         <Table>
           <TableHeader className="bg-[#E8F8F5] dark:bg-[#393053]">
             <TableRow className="hover:bg-[#E8F8F5] dark:hover:bg-[#443C68]/50 border-gray-200 dark:border-[#443C68]/50">
@@ -153,7 +153,7 @@ export default function Company() {
           </TableHeader>
           <TableBody>
             {filteredCompanies.map((row, index) => (
-              <TableRow key={row.id} className="border-gray-200 dark:border-[#443C68]/50 dark:hover:bg-[#393053]/50">
+              <TableRow key={row.id} >
                 <TableCell className="dark:text-white/75">{index + 1}</TableCell>
                 <TableCell className="dark:text-white/75">{row.type}</TableCell>
                 <TableCell className="dark:text-white/75">{row.name}</TableCell>

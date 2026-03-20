@@ -15,6 +15,7 @@ import {
 import { getAppointments } from '@/api/appointments'
 import { Pagination } from '@/components/Pagination'
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
+import { TableWrapper } from "@/components/shared/TableWrapper";
 
 export default function AllAppointmentsListPage() {
   const [approvalFilter, setApprovalFilter] = useState('all') 
@@ -232,7 +233,7 @@ export default function AllAppointmentsListPage() {
       <div className="max-w-[1600px] mx-auto p-6 space-y-6">
         
         <div className="flex items-center gap-3 pb-2 border-b border-gray-200 dark:border-[#443C68]/50">
-          <div className="p-2 rounded-lg bg-primary/10 dark:bg-primary/20">
+          <div className="p-2 rounded-lg bg-primary/10 dark:bg-white/15">
             <Calendar className="w-5 h-5 text-primary dark:text-[#3aaecb]" />
           </div>
           <h1 className="text-xl font-bold text-medivardaan-teal uppercase tracking-wide">
@@ -364,13 +365,13 @@ export default function AllAppointmentsListPage() {
                 </div>
 
                 {/* Appointments Table */}
-                <div className="border border-gray-200 dark:border-[#443C68]/50 rounded-lg overflow-hidden bg-white dark:bg-[#18122B]">
+                <TableWrapper>
                     {loading ? (
                         <div className="p-8 text-center text-muted-foreground">Loading appointments...</div>
                     ) : (
                     <table className="w-full">
                     <thead>
-                        <tr className="bg-primary/10 dark:bg-primary/20">
+                        <tr >
                         <th className="px-4 py-3 text-left text-sm font-medium text-gray-700 dark:text-white/90">Sr. No.</th>
                         <th className="px-4 py-3 text-left text-sm font-medium text-gray-700 dark:text-white/90">Name</th>
                         <th className="px-4 py-3 text-left text-sm font-medium text-gray-700 dark:text-white/90">Doctor Name</th>
@@ -441,7 +442,7 @@ export default function AllAppointmentsListPage() {
                     </tbody>
                     </table>
                     )}
-                </div>
+                </TableWrapper>
 
                 {/* Pagination Controls */}
                 {!loading && totalPages > 1 && (

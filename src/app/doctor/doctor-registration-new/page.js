@@ -726,7 +726,7 @@ export default function DoctorRegistrationPage() {
             ) : (
               <Table>
                 <TableHeader>
-                  <TableRow className="bg-primary/10 hover:bg-primary/20">
+                  <TableRow className="bg-primary/20 hover:bg-primary/20">
                     <TableHead className="font-semibold text-gray-900 dark:text-white">
                       Sr. No.
                     </TableHead>

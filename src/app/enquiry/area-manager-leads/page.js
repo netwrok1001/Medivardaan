@@ -113,7 +113,7 @@ export default function AreaManagerLeadsPage() {
       {/* Results Table */}
       <div className="rounded-md border dark:border-[#443C68]/50 bg-white dark:bg-[#18122B] shadow-sm overflow-hidden flex flex-col">
         <Table>
-          <TableHeader className="bg-primary/10 dark:bg-primary/20">
+          <TableHeader >
             <TableRow className="dark:border-[#443C68]/50">
               <TableHead className="w-[80px] font-bold text-primary dark:text-primary border-r border-primary/20">Sr No.</TableHead>
               <TableHead className="font-bold text-primary dark:text-primary border-r border-primary/20">Area Manager</TableHead>
