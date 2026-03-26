@@ -149,7 +149,7 @@ export default function AppointmentsReportPage() {
           />
 
           <div>
-            <Button onClick={handleSearch} className="bg-[#D35400] hover:bg-[#A04000] text-white px-8 font-medium shadow-sm transition-all w-full md:w-auto">
+            <Button onClick={handleSearch} className="bg-medivardaan-blue hover:bg-medivardaan-blue-light dark:bg-medivardaan-purple dark:hover:bg-medivardaan-purple-dark text-white px-8 font-medium shadow-sm transition-all w-full md:w-auto">
               Search
             </Button>
           </div>
