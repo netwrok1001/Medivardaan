@@ -13,7 +13,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Settings, FileX } from "lucide-react"; 
+import { Settings, FileX, Receipt } from "lucide-react"; 
 
 // Hooks
 import { useDoctors } from "@/hooks/useDoctors";
@@ -53,7 +53,7 @@ export default function CancellationTreatmentPage() {
     <div className="w-full p-6 space-y-6 min-h-screen bg-white dark:bg-[#18122B] transition-colors duration-300">
       {/* Header */}
       <div className="flex items-center gap-3 pb-2 border-b border-gray-200 dark:border-[#443C68]/50">
-         <Settings className="w-5 h-5 text-primary animate-spin-slow" />
+         <Receipt className="w-5 h-5 font-bold text-medivardaan-teal uppercase tracking-wid" />
         <h1 className="text-xl font-bold text-medivardaan-teal uppercase tracking-wide">
           CANCELLATION TREATMENT
         </h1>
@@ -119,7 +119,7 @@ export default function CancellationTreatmentPage() {
               <Label className="text-sm font-semibold text-gray-700 dark:text-white/75">Cancellation Date</Label>
               <Input
                 type="date"
-                className="h-10 bg-white dark:bg-[#393053] border-gray-300 dark:border-[#443C68]/50"
+                className="h-10 bg-white dark:bg-[#393053] border-gray-300 dark:border-[#443C68]/50 hover:cursor-pointer  "
                 value={formData.cancellationDate}
                 onChange={(e) => handleInputChange("cancellationDate", e.target.value)}
               />
